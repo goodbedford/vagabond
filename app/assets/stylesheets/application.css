@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+.secondary_color{
+  background-color: green;
+  color:white;
+  position:relative;
+  top: 200px;
+  z-index: 2000;
+  opacity: 0.75;
+}

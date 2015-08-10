@@ -2,13 +2,32 @@
 <html>
 <head>
   <title>Vagabond</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<nav class="navbar navbar-default" id="nav">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <header>
+          <img src=<%= asset_path"sf.jpg" %> width="50px"/> 
+          <span>Vagabond</span>
+        </header>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav pull-right">
+        <%= link_to "Home", root_path, class: "btn" %>
+        <%= link_to "Sign Up", "/", class: "btn" %>
+        <%= link_to "Login", "/", class: "btn" %>
 
+
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
 <%= yield %>
-
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>
