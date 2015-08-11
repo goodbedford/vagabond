@@ -12,8 +12,7 @@
     <div class="container-fluid">
       <div class="navbar-header">
         <header>
-          <img src=<%= asset_path"sf.jpg" %> width="50px"/> 
-          <span>Vagabond</span>
+          <img src=<%= asset_path"logo_vagabond.png"  %> width="50px"/> 
         </header>
 
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -23,14 +22,18 @@
           <span class="icon-bar"></span>
         </button>
       </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav pull-right">
-          <%= link_to "Home", root_path, class: "btn" %>
-          <%= link_to "Sign Up", signup_path, class: "btn" %>
-          <%= link_to "Login", login_path, class: "btn" %>
-
-
-        </ul>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav pull-left">
+            <%= link_to "Vagabond", root_path, class: "btn" %>
+            <%= link_to "Home", root_path, class: "btn" %>
+          </ul>
+          <ul class="nav navbar-nav pull-right">
+            <% if current_user %> 
+              <h3> Welcome <%= current_user.username %> ! <%= link_to "Log out",  logout_path, method: "destroy", class: "btn btn-danger" %></h3> 
+            <% else %> 
+              <p><%= link_to "Sign Up", signup_path , class: "btn btn-primary" %>|<%= link_to "Log In", login_path , class: "btn btn-primary" %></p>
+            <% end %> 
+          </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>

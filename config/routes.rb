@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
  # Sesions routes
  get "/login", to: "sessions#new"
- get "/logout", to: "sessions#destroy"
+ post "/logout", to: "sessions#destroy"
  resources :sessions, only: [:create]
  
  #post routes
