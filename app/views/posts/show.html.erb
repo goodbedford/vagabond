@@ -1,8 +1,15 @@
-<h1><%= @post.title %></h1>
-<hr>
-<p>
-	<%= @post.body %>
-</p>
+<div class="col-sm-4 col-sm-offset-4">
+	
+	<h1><%= @post.title %></h1>
+	<hr>
+	<p>
+		<%= @post.body %>
+		<br><br>
+		Author: <%= User.find(@post.user_id).username %>
+	</p>
 
-<%= link_to "Edit", edit_post_path(@post), class: "btn btn-primary" %> 
-<%= link_to "Delete", post_path(@post), class: "btn btn-primary" %> 
+	<%= link_to "Edit", edit_post_path(@post), class: "btn btn-primary" %> 
+	<%= link_to "Delete", post_path(@post), class: "btn btn-primary" %> 
+
+
+</div>

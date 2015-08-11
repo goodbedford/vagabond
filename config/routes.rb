@@ -18,5 +18,8 @@ Rails.application.routes.draw do
  #post routes
  resources :posts, except: [:index]
 
+ #city routes
+ 
+
 
 end
