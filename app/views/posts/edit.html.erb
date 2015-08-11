@@ -1,2 +1,12 @@
-<h1>Posts#edit</h1>
-<p>Find me in app/views/posts/edit.html.erb</p>
+
+<div class="col-sm-4 col-sm-offset-4">
+ <h1>Edit Post</h1>
+ <%= form_for @post do |b| %>
+   <%= b.label :title  %>:
+    <%= b.text_field :title, class:"form-control" %><br />
+    <%= b.label :body %>:
+    <%= b.text_area :body, class:"form-control" %><br />
+    <%= b.submit "Save Post", class:"btn btn-primary" %>
+ <% end %>
+
+</div>
