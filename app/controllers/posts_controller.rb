@@ -16,11 +16,15 @@ class PostsController < ApplicationController
     render :show
   end
 
+  def edit
+    @post = Post.find(params[:id])
+    render :edit
+  end
+
   def update
   end
 
-  def edit
-  end
+  
 
   def destroy
   end
