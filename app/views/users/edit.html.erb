@@ -1,0 +1,14 @@
+<div class="col-sm-4 col-sm-offset-4">
+  <legend>Edit Profile</legend>
+  <%= form_for @user do |f| %>
+    <%= f.label :username %>:
+     <%= f.text_field :username, class:"form-control" %><br />
+     
+     <%= f.label :email %>:
+     <%= f.email_field :email, class:"form-control" %><br />
+     <%= f.label :password %>:
+     <%= f.password_field :password, class:"form-control" %><br />
+     <!-- image upload left -->
+     <%= f.submit "Save Profile", class:"btn btn-primary" %>
+  <% end %>
+</div>

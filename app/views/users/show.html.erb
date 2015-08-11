@@ -1,14 +1,19 @@
 <div class="container">
 	<div class="row">    
-		<div class="col-sm-6 col-sm-offset-3">
+		<div class="col-sm-4">
 			
 			<div>
 				<h2>Hi, <%= @current_user.username %></h2>
+				<%= link_to "Edit", edit_user_path(@current_user), class: "btn btn-primary" %> 
 			</div> 
-			<div class="well col-xs-12">
+		</div>
+			<div class="col-sm-8">
 				<% @current_user.posts.each do |post| %>
-				<h3><%= post.title %></h3> 
-				<p><%= post.body %></p>
+					<div class="well col-xs-12">
+						<h3><%= post.title %></h3> 
+						<p><%= post.body %></p>
+						<%= link_to "Edit", edit_post_path(post), class: "btn btn-primary" %> 
+					</div>
 				<% end %>
 			</div>
 		</div>
