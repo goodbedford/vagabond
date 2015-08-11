@@ -1,6 +1,16 @@
-
-
-<div>
-	<h2>Hi, <%= @current_user.username %></h2>
-</div> 
-
+<div class="container">
+	<div class="row">    
+		<div class="col-sm-6 col-sm-offset-3">
+			
+			<div>
+				<h2>Hi, <%= @current_user.username %></h2>
+			</div> 
+			<div class="well col-xs-12">
+				<% @current_user.posts.each do |post| %>
+				<h3><%= post.title %></h3> 
+				<p><%= post.body %></p>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>

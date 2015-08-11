@@ -15,8 +15,8 @@ Rails.application.routes.draw do
  get "/logout", to: "sessions#destroy"
  resources :sessions, only: [:create]
  
+ #post routes
+ resources :posts, except: [:index]
 
 
-
- 
 end
