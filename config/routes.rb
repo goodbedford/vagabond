@@ -8,7 +8,7 @@ Rails.application.routes.draw do
  get "/signup", to: "users#new"
  get "/profile", to: "users#show"
 
- resources :users, only: [:create, :edit, :update]
+ resources :users, only: [:create, :edit, :update, :show]
 
  # Sesions routes
  get "/login", to: "sessions#new"

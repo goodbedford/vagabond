@@ -1,2 +1,8 @@
-<h1>Posts#edit</h1>
-<p>Find me in app/views/posts/edit.html.erb</p>
+<h1>Edit Post</h1>
+
+<%= form_for @post do |f| %>
+<%= f.text_field :title, placeholder: "Title" %><br>
+<%= f.text_field :body, placeholder: "Enter Post" %><br>
+<hr>
+<%= f.submit "Save Posts" %>
+<% end %>

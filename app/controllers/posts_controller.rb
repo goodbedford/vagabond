@@ -22,6 +22,13 @@ class PostsController < ApplicationController
   end
 
   def update
+    post = Post.find(params[:id])
+    if current_user.posts.include? post
+      post.update_attributes(post_params)
+      redirect_to post_path
+    else
+      redirect_to login_path
+    end
   end
 
   
