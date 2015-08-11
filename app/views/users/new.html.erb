@@ -1,0 +1,17 @@
+<div class="col-sm-4 col-sm-offset-4">
+  <legend>Sign Up</legend>
+  <%= form_for @user do |f| %>
+    <%= f.label :username %>:
+     <%= f.text_field :username, class:"form-control" %><br />
+     
+     <%= f.label :email %>:
+     <%= f.email_field :email, class:"form-control" %><br />
+     <%= f.label :password %>:
+     <%= f.password_field :password, class:"form-control" %><br />
+     <%= f.label :current_city %>:
+     <%= f.text_field :current_city, class:"form-control" %><br />
+
+
+     <%= f.submit "Sign Up", class:"btn btn-primary" %>
+  <% end %>
+</div>
