@@ -5,7 +5,11 @@
 	<p>
 		<%= @post.body %>
 		<br><br>
-		Author: <%= User.find(@post.user_id).username %>
+		Author: <%= @post.user.username %>
+		<!-- Author: <%= User.find(@post.user_id).username %> -->
+		<br>	
+		<!-- City: <%= City.find(@post.city_id).name %> -->
+		City: <%= @post.city.name %>
 	</p>
 
 	<%= link_to "Edit", edit_post_path(@post), class: "btn btn-primary" %> 

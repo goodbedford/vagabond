@@ -1,13 +1,24 @@
 class PostsController < ApplicationController
   def new
     @post = Post.new
+    
+     
+
     render :new
+
+
   end
 
   def create
     # post = Post.create(post_params)
     # current_user.posts << post
-    post = current_user.posts.create(post_params) 
+    post = current_user.posts.create(post_params)
+    current_city = City.find(session[:current_city])
+    puts "This is the current city"
+    p current_city
+    post.city = current_city
+    post.save
+    
     redirect_to post_path(post)
   end
 
