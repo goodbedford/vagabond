@@ -2,7 +2,6 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
     
-     
 
     render :new
 
@@ -47,7 +46,7 @@ class PostsController < ApplicationController
   def destroy
     post = Post.find(params[:id])
     post.destroy
-    redirect_to profile_path
+    redirect_to user_path(post.user)
   end
 
   private

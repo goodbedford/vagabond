@@ -7,8 +7,8 @@ class UsersController < ApplicationController
   end
 
   def show
-  	@current_user = User.find(session[:user_id])       
-    #@current_user = User.find(params[:id]) 
+  	# @current_user = User.find(session[:user_id])    
+    @current_user = User.find(params[:id]) 
   	render :show
   end
 
