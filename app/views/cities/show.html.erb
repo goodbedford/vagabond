@@ -13,7 +13,6 @@
 </div>	
 
 
-
 <div class="col-sm-8">
 	<% @city.posts.each do |post| %>
 	<div class="well col-xs-12">
@@ -22,8 +21,9 @@
 		<% end %>
 		<p><%= post.body %></p>
 
-		
+		<%= link_to user_path(post.user) do %>
 		<p>Author: <%=post.user.username  %></p>
+		<% end %>
 		
 	</div>
 	<% end %>

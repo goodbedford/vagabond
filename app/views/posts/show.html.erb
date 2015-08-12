@@ -13,7 +13,7 @@
 	</p>
 
 	<%= link_to "Edit", edit_post_path(@post), class: "btn btn-primary" %> 
-	<%= link_to "Delete", post_path, method: :delete, class: "btn btn-primary" %> 
+	<%= link_to "Delete", post_path, method: :delete, class: "btn btn-primary", data:{confirm: "#{@post.user.username}, are you sure you to delete this post: #{@post.title}?"} %> 
 
 
 </div>
