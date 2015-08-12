@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   
 
+
  root "site#index"
 
  #User routes
@@ -19,6 +20,8 @@ Rails.application.routes.draw do
  resources :posts, except: [:index]
 
  #city routes
+
+ resources :cities
  
 
 

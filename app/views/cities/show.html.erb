@@ -1,0 +1,15 @@
+<div>
+	<h1>
+		Welcome to <%= @city.name %>, <%= @city.country%>
+	</h1>
+	<%= link_to "New Post", new_post_path, class:"btn btn-primary"%>
+	<br>
+
+</div>
+
+<div>
+	<img src = <%= @city.img_url %> width: 100%>
+</div>	
+
+
+
