@@ -1,3 +1,22 @@
+h4{
+	font-family: serif;
+	font-weight: bolder;
+	font-size: 40pt;
+	color: white;
+
+}
+body{
+	background-color: #9EA2B0;
+	margin: 0px, auto;
+}
+.jumbotron{
+	background-image: url('http://www.sanfrancisco.travel/sites/sftraveldev.prod.acquia-sites.com/files/SanFrancisco_0.jpg ');
+	background-attachment: fixed;
+	min-height: 400px;
+	background-position: center center;
+	margin-top: 0px;
+
+}
 // Place all the styles related to the site controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
