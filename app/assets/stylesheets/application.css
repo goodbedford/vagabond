@@ -14,6 +14,10 @@
  *= require_self
  */
 
+
+ul{
+	padding-top: 10px;
+}
 .secondary_color{
   background-color: green;
   color:white;
@@ -26,3 +30,13 @@
 .error, .errorInput {
   color: red;
 }
+.navbar{
+	background-color: #CEECF5;
+}
+#index{
+	background-color: #060C21;
+}
+#post{
+	background-color: #F7BE81;
+}
+
