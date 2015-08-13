@@ -1,35 +1,28 @@
-<div>
-	<h1>
-		Welcome to <%= @city.name %>, <%= @city.country%>
-	</h1>
-	<% if current_user%>
-	<%= link_to "New Post", new_post_path, class:"btn btn-primary"%>
-	<% end %>
+
+<div class="jumbotron">
+	<!-- <img src = <%= @city.img_url %> /> -->
+	<h4>Welcome to <%= @city.name %>, <%= @city.country%></h4>
+	
 	<br>
-
-
 </div>
 
-<div>
-	<img src = <%= @city.img_url %> />
-</div>	
-
-
-<div class="col-sm-8">
-	<% @city.posts.each do |post| %>
-	<div class="well col-xs-12">
-		<%= link_to post_path(post) do  %>
-		<h3><%= post.title %></h3>
+<div class="row">
+  <div class="col-md-9 col-md-push-3">
+  	<div class="col-sm-9">
+		<% @city.posts.each do |post| %>
+		<div class="well col-xs-12" id="post">
+			<%= link_to post_path(post) do  %>
+			<h3><%= post.title %></h3>
+			<% end %>
+			<h5><%= post.body %></h5>
+			<%= link_to user_path(post.user) do %>
+			<p>Author: <%=post.user.username  %></p>
+			<% end %>	
+		</div>
 		<% end %>
-		<p><%= post.body %></p>
-		<%= link_to user_path(post.user) do %>
-		<p>Author: <%=post.user.username  %></p>
-		<% end %>
-		
 	</div>
-	<% end %>
-
+  </div>
+  <div class="col-md-3 col-md-pull-9">
+  	<%= link_to "New Post", new_post_path, class:"btn btn-primary btn-lg pull-right"%>
+  </div>
 </div>
-
-
-

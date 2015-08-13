@@ -1,9 +1,10 @@
 <div class="container">
 	<div class="row">    
-		<div class="col-sm-4">
-			
-			<div>
-				<img src="http://i.imgur.com/IWaPaC0.jpg" class="img-responsive"/> 
+		<div class="col-sm-3">
+			<h3><current><%= @current_user.username %> </center></h3><hr>
+				<img src="http://i.imgur.com/IWaPaC0.jpg" class="img-responsive img-circle" width="200px"/>
+				<div class= "container-fluid" id="user_info">
+					<h3>Member since:<br> <%= localize(@current_user.created_at, :format => '%m/%d/%Y') %></h3> 
 
 				<h2>Hi, <%= @current_user.username %></h2>
 				<h3>Member since:<br> <%= localize(@current_user.created_at, :format => '%m/%d/%Y') %></h3> 
@@ -34,10 +35,11 @@
 				 <%= link_to "Edit", edit_user_path(@current_user), class: "btn btn-primary" %> 
 				<% end %>
 			</div> 
+
 		</div>
 			<div class="col-sm-8">
 				<% @current_user.posts.each do |post| %>
-					<div class="well col-xs-12">
+					<div class="well col-xs-12" id="post">
 					<%= link_to post_path(post) do  %>
 					<h3><%= post.title %></h3>
 					<% end %>
