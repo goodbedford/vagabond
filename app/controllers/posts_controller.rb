@@ -8,18 +8,20 @@ class PostsController < ApplicationController
 
   end
 
-  def create
+  def create  
     # post = Post.create(post_params)
     # current_user.posts << post
     if session[:current_city]
       current_city = City.find(session[:current_city])
       post = current_user.posts.create(post_params)
-      puts "This is the current city"
-      p current_city
       post.city = current_city
-      post.save
-      
-      redirect_to post_path(post)
+      if post.save
+        redirect_to post_path(post)
+      else
+      p post.errors.full_messages
+        flash[:error] = post.errors.full_messages
+        redirect_to new_post_path
+      end  
     else
       flash[:error] = "Please pick another city."
       redirect_to root_path
