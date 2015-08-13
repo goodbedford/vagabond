@@ -2,7 +2,9 @@
 	<h1>
 		Welcome to <%= @city.name %>, <%= @city.country%>
 	</h1>
+	<% if current_user%>
 	<%= link_to "New Post", new_post_path, class:"btn btn-primary"%>
+	<% end %>
 	<br>
 
 
@@ -20,7 +22,6 @@
 		<h3><%= post.title %></h3>
 		<% end %>
 		<p><%= post.body %></p>
-
 		<%= link_to user_path(post.user) do %>
 		<p>Author: <%=post.user.username  %></p>
 		<% end %>
