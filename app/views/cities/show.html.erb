@@ -1,5 +1,10 @@
 
 <div class="jumbotron">
+	<!-- :style => "background-image: url(<%= @city.img_url %>);" -->
+	<style media="screen">
+		.jumbotron {background-image: url(<%= @city.img_url %>);}
+	</style>
+	
 	<!-- <img src = <%= @city.img_url %> /> -->
 	<h4>Welcome to <%= @city.name %>, <%= @city.country%></h4>
 	
