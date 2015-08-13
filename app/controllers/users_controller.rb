@@ -7,6 +7,8 @@ class UsersController < ApplicationController
   end
 
   def show
+    @city_list = []
+    @temp_city ={}
   	# @current_user = User.find(session[:user_id])    
     @current_user = User.find(params[:id]) 
     render :show

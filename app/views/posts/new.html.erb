@@ -4,6 +4,11 @@
 <div class="col-sm-4 col-sm-offset-4">
  <legend>New Post</legend>
  <%= form_for @post do |b| %>
+  <% flash.each do |name, msg| %>
+    <% msg.each do |m| %>
+      <%= content_tag :div, m, class: "#{name} error" %>
+    <% end%>
+  <% end %>
    <%= b.label :title  %>:
     <%= b.text_field :title, class:"form-control" %><br />
     <%= b.label :body %>:

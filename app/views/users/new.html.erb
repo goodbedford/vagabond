@@ -4,8 +4,8 @@
     <% flash.each do |name, msg| %>
       <% msg.each do |m| %>
         <%= content_tag :div, m, class: "#{name} error" %>
-    <% end%>
-      <% end %>
+      <% end%>
+    <% end %>
 
     <%= f.label :username %>:
      <%= f.text_field :username, class:"form-control" %><br />

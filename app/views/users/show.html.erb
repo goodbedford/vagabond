@@ -6,10 +6,36 @@
 				<div class= "container-fluid" id="user_info">
 					<h3>Member since:<br> <%= localize(@current_user.created_at, :format => '%m/%d/%Y') %></h3> 
 
-					<% if @current_user.id == session[:user_id] %>
-				 	<%= link_to "Edit", edit_user_path(@current_user), class: "btn btn-primary" %> 
+				<h2>Hi, <%= @current_user.username %></h2>
+				<h3>Member since:<br> <%= localize(@current_user.created_at, :format => '%m/%d/%Y') %></h3> 
+				<% @current_user.posts.each do |p| %>
+					<% post_city = p.city.name %>
+					<% if !@city_list.include? @temp_city[post_city] %>
+							<% @temp_city[post_city] = {"#{post_city}" => 1} %>
+							<% p "goodbed" %>
+							<% p @temp_city %>
+							<% @city_list.push(@temp_city[post_city]) %>
+					<% else %>
+							<% index = @city_list.index @temp_city[post_city] %>
+							<% p @city_list[index][post_city] += 1 %>
+					<% end%>
 					<% end %>
-				</div>
+					<% @city_list.each  do |city| %>
+					<% city.each do |key, val| %>
+						<% if val > 2 %>
+							<%	p_str = "posts" %>
+							<% else %>
+							<%  p_str = "post"	 %>
+							<% end%>
+						<span><%= "#{key}: #{val} #{p_str}" %></span><br>
+					<% end %>
+					<% end %>
+
+				<% if @current_user.id == session[:user_id] %>
+				 <%= link_to "Edit", edit_user_path(@current_user), class: "btn btn-primary" %> 
+				<% end %>
+			</div> 
+
 		</div>
 			<div class="col-sm-8">
 				<% @current_user.posts.each do |post| %>
@@ -19,6 +45,7 @@
 					<% end %>
 						<p><%= post.body %></p>
 						<p>Author: <%=@current_user.username  %></p>
+						<p>City: <%= post.city.name %></p>
 					</div>
 				<% end %>
 			</div>
