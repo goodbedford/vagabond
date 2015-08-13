@@ -32,12 +32,16 @@ ul{
 }
 .navbar{
 	background-color: #CEECF5;
+
 }
 #index{
 	background-color: #060C21;
 }
 #post{
-	background-color: #F7BE81;
+	background-color: #D8F6CE;
+}
+#nav{
+  margin-bottom: 0px;
 }
 
 
