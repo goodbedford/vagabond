@@ -7,7 +7,7 @@
 
 				<h2>Hi, <%= @current_user.username %></h2>
 				<h3>Member since:<br> <%= localize(@current_user.created_at, :format => '%m/%d/%Y') %></h3> 
-				<small><% @current_user.posts.each do |p| %>
+				<% @current_user.posts.each do |p| %>
 					<% post_city = p.city.name %>
 					<% if !@city_list.include? @temp_city[post_city] %>
 							<% @temp_city[post_city] = {"#{post_city}" => 1} %>
@@ -26,10 +26,9 @@
 							<% else %>
 							<%  p_str = "post"	 %>
 							<% end%>
-						<span><%= "#{key}: #{val} #{p_str}" %></span>
+						<span><%= "#{key}: #{val} #{p_str}" %></span><br>
 					<% end %>
 					<% end %>
-					</small>
 
 				<% if @current_user.id == session[:user_id] %>
 				 <%= link_to "Edit", edit_user_path(@current_user), class: "btn btn-primary" %> 
