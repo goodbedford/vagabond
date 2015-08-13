@@ -1,9 +1,26 @@
+<body>
+
+<div id="like-container"> 
+<!-- facebook like button + redirect to fb page -->
+<div id="fb-root"></div>
+
+<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
+
+<!-- twitter button + redirect to twitter page -->
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="GreenInSF">Tweet</a>
+
+
+<!-- Github fork button link -->
+<a class="github-button" href="https://github.com/goodbedford/vagabond" data-icon="octicon-git-branch" data-style="mega" data-count-href="/ntkme/github-buttons/network" data-count-api="/repos/ntkme/github-buttons#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork ntkme/github-buttons on GitHub">Fork</a>
+
+</div>
 
  <div class="container">
 
  	<div class="row">
 
  		<div class="col-xs-12">
+
  			<!--  <img src=<%= asset_path "sf.jpg" %> />  -->
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, class: name %>
@@ -14,3 +31,17 @@
  		</div>
  	</div>
  </div>
+
+ <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=80860984538";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<!-- Place this tag right after the last button or just before your close body tag. -->
+<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+</body>

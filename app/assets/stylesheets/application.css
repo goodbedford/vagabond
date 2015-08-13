@@ -26,3 +26,11 @@
 .error, .errorInput {
   color: red;
 }
+
+#like-container{
+	float: right;
+}
+
+.fb_iframe_widget {
+    vertical-align: 5px;
+}
