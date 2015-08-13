@@ -40,3 +40,11 @@ ul{
 	background-color: #F7BE81;
 }
 
+
+#like-container{
+	float: right;
+}
+
+.fb_iframe_widget {
+    vertical-align: 5px;
+}
