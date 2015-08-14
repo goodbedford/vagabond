@@ -18,7 +18,6 @@
           <img src=<%= asset_path"logo_vagabond.png" %> class="margin-lt" width="80px">
           <% end %>
         </header>
-
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
@@ -47,6 +46,9 @@
       </div><!-- /.navbar-collapse -->
     <!-- </div>/.container-fluid -->
   </nav>
+  <% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, class: "#{name} alert alert-danger text-center" %>
+  <% end %>
   <%= yield %>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
