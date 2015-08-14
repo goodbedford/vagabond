@@ -1,13 +1,10 @@
 <div class="container">
 	<div class="row">    
 		<div class="col-sm-3">
-			<h3><current><%= @current_user.username %> </center></h3><hr>
 				<img src="http://i.imgur.com/IWaPaC0.jpg" class="img-responsive img-circle" width="200px"/>
 				<div class= "container-fluid" id="user_info">
-					<h3>Member since:<br> <%= localize(@current_user.created_at, :format => '%m/%d/%Y') %></h3> 
-
 				<h2>Hi, <%= @current_user.username %></h2>
-				<h3>Member since:<br> <%= localize(@current_user.created_at, :format => '%m/%d/%Y') %></h3> 
+				<h5>Member since:<br> <%= localize(@current_user.created_at, :format => '%m/%d/%Y') %></h5> 
 				<% @current_user.posts.each do |p| %>
 					<% post_city = p.city.name %>
 					<% if !@city_list.include? @temp_city[post_city] %>
@@ -32,7 +29,7 @@
 					<% end %>
 
 				<% if @current_user.id == session[:user_id] %>
-				 <%= link_to "Edit", edit_user_path(@current_user), class: "btn btn-primary" %> 
+				 <%= link_to "Edit", edit_user_path(@current_user), class: "btn btn-success" %> 
 				<% end %>
 			</div> 
 

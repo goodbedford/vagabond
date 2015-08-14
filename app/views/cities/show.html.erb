@@ -1,4 +1,4 @@
-
+<div id="city">
 <div class="jumbotron">
 	<!-- :style => "background-image: url(<%= @city.img_url %>);" -->
 	<style media="screen">
@@ -29,12 +29,12 @@
 				<h5>Tags: <%= raw post.tags.map(&:title).map { |t| link_to t, tag_path(t) }.join(', ') %>
 				</h5>
 				<% end %>
-
 			</div>
 			<% end %>
 		</div>
 	</div>
-	<div class="col-md-3 col-md-pull-9">
-		<%= link_to "New Post", new_post_path, class:"btn btn-primary btn-lg pull-right"%>
-	</div>
+ </div>
+  <div class="col-md-3 col-md-pull-9">
+  	<%= link_to "New Post", new_post_path, class:"btn btn-success btn-lg pull-right"%>
+  </div>
 </div>
