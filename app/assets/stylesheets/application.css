@@ -41,7 +41,9 @@ a.profile{
 iframe{
   position: relative;
 }
-
+.img-profile{
+  margin: 1.4em 0;
+}
 #index{
   background-color: white;
   background-size: cover;
@@ -74,4 +76,6 @@ h1, h5, p{
 ul{
   padding-top: 10px;
 }
-
+.well{
+  margin-top: 20px;
+}

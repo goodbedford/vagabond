@@ -1,22 +1,12 @@
 <div class="col-sm-4 col-sm-offset-4">
   <legend>Sign Up</legend>
   <%= form_for @user do |f| %>
-    <% flash.each do |name, msg| %>
-      <% msg.each do |m| %>
-        <%= content_tag :div, m, class: "#{name} error" %>
-      <% end%>
-    <% end %>
-
     <%= f.label :username %>:
-     <%= f.text_field :username, class:"form-control" %><br />
-     
+     <%= f.text_field :username,autofocus: true, class:"form-control" %><br />
      <%= f.label :email %>:
      <%= f.email_field :email, class:"form-control" %><br />
      <%= f.label :password %>:
      <%= f.password_field :password, class:"form-control" %><br />
-     
-
-
      <%= f.submit "Sign Up", class:"btn btn-primary" %>
   <% end %>
 </div>

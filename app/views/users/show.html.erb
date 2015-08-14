@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">    
 		<div class="col-sm-3">
-				<img src="http://i.imgur.com/IWaPaC0.jpg" class="img-responsive img-circle" width="200px"/>
+				<img src="http://i.imgur.com/IWaPaC0.jpg" class="img-responsive img-circle img-profile" width="200px"/>
 				<div class= "container-fluid" id="user_info">
 				<h2>Hi, <%= @current_user.username %></h2>
 				<h5>Member since:<br> <%= localize(@current_user.created_at, :format => '%m/%d/%Y') %></h5> 
@@ -19,7 +19,7 @@
 					<% end %>
 					<% @city_list.each  do |city| %>
 					<% city.each do |key, val| %>
-						<% if val > 2 %>
+						<% if val > 1 %>
 							<%	p_str = "posts" %>
 							<% else %>
 							<%  p_str = "post"	 %>
