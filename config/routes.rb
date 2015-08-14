@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
 
   
-
-
  root "site#index"
 
  #User routes
@@ -20,9 +18,10 @@ Rails.application.routes.draw do
  resources :posts, except: [:index]
 
  #city routes
-
- resources :cities
+resources :cities
  
+ #tags routes
+resources :tags, only: [:create, :destroy, :show]
 
 
 end

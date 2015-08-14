@@ -1,6 +1,7 @@
 <div class=" well col-sm-9 col-sm-offset-1" id="post">
 	
 	<h1><%= @post.title %></h1>
+	
 	<hr>
 	<p>
 		<%= @post.body %>
@@ -9,7 +10,8 @@
 		<!-- Author: <%= User.find(@post.user_id).username %> -->
 		<br>	
 		<!-- City: <%= City.find(@post.city_id).name %> -->
-		City: <%= @post.city.name %>
+		City: <%= @post.city.name %> <br>
+		Tags: <%= raw @post.tags.map(&:title).map { |t| link_to t, tag_path(t) }.join(', ') %>
 	</p>
 	<% if @post.user == current_user%>
 		<%= link_to "Edit", edit_post_path(@post), class: "btn btn-primary" %> 
