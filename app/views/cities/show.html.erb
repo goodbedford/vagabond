@@ -9,6 +9,7 @@
 	<h4>Welcome to <%= @city.name %>, <%= @city.country%></h4>
 	
 	<br>
+	<%= link_to "New Post", new_post_path, class:"btn btn-success btn-lg pull-right"%>
 </div>
 
 <div class="row">
@@ -35,6 +36,6 @@
 	</div>
  </div>
   <div class="col-md-3 col-md-pull-9">
-  	<%= link_to "New Post", new_post_path, class:"btn btn-success btn-lg pull-right"%>
+
   </div>
 </div>
