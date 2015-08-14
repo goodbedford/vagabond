@@ -43,6 +43,8 @@
 						<p><%= post.body %></p>
 						<p>Author: <%=@current_user.username  %></p>
 						<p>City: <%= post.city.name %></p>
+						<p>Tags: <%= raw post.tags.map(&:title).map { |t| link_to t, tag_path(t) }.join(', ') %></p>
+
 					</div>
 				<% end %>
 			</div>

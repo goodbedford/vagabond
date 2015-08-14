@@ -1,2 +1,9 @@
-<h1>Tags#show</h1>
-<p>Find me in app/views/tags/show.html.erb</p>
+
+<div class="well col-sm-8 col-sm-offset-2">
+<h2>Tag List</h2>
+<p>
+  <% @tags.each do |t| %>
+  <%= t.title %>&nbsp;
+  <% end %>
+</p>
+</div>

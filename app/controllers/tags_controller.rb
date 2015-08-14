@@ -6,5 +6,6 @@ class TagsController < ApplicationController
   end
 
   def show
+    @tags =Tag.all
   end
 end
