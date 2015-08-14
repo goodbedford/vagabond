@@ -15,13 +15,19 @@
  */
 
 a {
-  color: white;
+  color: rgba(153, 204, 51, 1);
   font-size: 18px;
+  margin-left: 10px;
+}
+.margin-lt{
   margin-left: 70px;
 }
-.city-list{
-  background-color: 
-  margin: 0 auto;
+a:hover{
+  color: #781EB8;
+}
+a.list-city{
+  margin: 0 0 60px 0;
+
 }
 .error, .errorInput {
   color: red;
@@ -29,20 +35,27 @@ a {
 .fb_iframe_widget {
     vertical-align: 5px;
 }
+a.profile{
+  color: white!important;
+}
 iframe{
   position: relative;
 }
 
 #index{
-  background-image: url("http://e794d552b4c822b8205c-27b9cc3fb8731a4a7598943b8a8a6a91.r73.cf1.rackcdn.com/10/2/large.jpg");
+  background-color: white;
   background-size: cover;
 }
-h1, p{
-  color: white;
+h1, h5, p{
+  color: #781EB8 ;
 }
-h5{
-  color: white;
+.p-title{
+  color: #781EB8;
 }
+.p-title:hover{
+  color: green;
+}
+
 #like-container{
   position: absolute;
   padding-top: 150px;
@@ -51,12 +64,12 @@ h5{
 .navbar-default, .container-fluid{
   background-color:rgba(0,99,232,.4);
   background-size: cover;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   z-index: 1;
   color: white;
 }
 #post{
-  background-color: rgba(122,90,55,.8);
+  background-color: rgba(153, 204, 51, .1);
 }
 ul{
   padding-top: 10px;
