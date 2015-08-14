@@ -18,37 +18,58 @@
 ul{
 	padding-top: 10px;
 }
-.secondary_color{
-  background-color: green;
-  color:white;
-  position:relative;
-  top: 200px;
-  z-index: 2000;
-  opacity: 0.75;
+iframe{
+  position: relative;
+}
+h1, p{
+  color: white;
+}
+h5{
+  color: white;
+}
+a {
+  color: white;
+  font-size: 18px;
+  margin-left: 70px;
+}
+
+.city-list{
+  background-color: 
+  margin: 0 auto;
+}
+
+/*.city-list a{
+  text-align: center;
+  width: 100%;*/
 }
 
 .error, .errorInput {
   color: red;
 }
-.navbar{
-	background-color: #CEECF5;
 
-}
-#index{
-	background-color: #060C21;
-}
 #post{
-	background-color: #D8F6CE;
+	background-color: rgba(122,90,55,.8);
 }
-#nav{
-  margin-bottom: 0px;
+.navbar-default, .container-fluid{
+  background-color:rgba(0,99,232,.4);
+  background-size: cover;
+  margin-bottom: 20px;
+  z-index: 1;
+  color: white;
+ 
 }
-
-
 #like-container{
-	float: right;
+  position: absolute;
+  padding-top: 150px;
+  z-index: 1;
 }
 
+#index{
+  background-image: url("http://e794d552b4c822b8205c-27b9cc3fb8731a4a7598943b8a8a6a91.r73.cf1.rackcdn.com/10/2/large.jpg");
+  background-size: cover;
+
+}
 .fb_iframe_widget {
     vertical-align: 5px;
 }
+
