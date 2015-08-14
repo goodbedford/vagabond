@@ -4,17 +4,23 @@
 <div class="col-sm-4 col-sm-offset-4">
  <legend>New Post</legend>
  <%= form_for @post do |b| %>
-  <% flash.each do |name, msg| %>
-    <% msg.each do |m| %>
-      <%= content_tag :div, m, class: "#{name} error" %>
-    <% end%>
-  <% end %>
-   <%= b.label :title  %>:
-    <%= b.text_field :title, class:"form-control" %><br />
-    <%= b.label :body %>:
-    <%= b.text_area :body, class:"form-control" %><br />
-    <%= b.submit "Save Post", class:"btn btn-primary" %>
+ <% flash.each do |name, msg| %>
+ <% msg.each do |m| %>
+ <%= content_tag :div, m, class: "#{name} error" %>
+ <% end%>
+ <% end %>
+ <%= b.label :title  %>:
+ <%= b.text_field :title, class:"form-control" %><br />
+ <%= b.label :body %>:
+ <%= b.text_area :body, class:"form-control" %><br />
+
+ <%= b.label :tag_list %>:
+ <br><%= b.text_field :tag_list, class:"form-control" %><hr />
+
+ <%= b.submit "Save Post", class:"btn btn-primary" %>
  <% end %>
 </div>
+
+
 
 
